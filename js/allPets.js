@@ -1,10 +1,10 @@
 fetch("https://openapi.programming-hero.com/api/peddy/pets")
   .then((res) => res.json())
-  .then((data) => allPetFunction(data.pets));
+.then((data) => allPetFunction(data.pets));
 
 const allPetFunction = (data) => {
   data.forEach((eachPet) => {
-    console.log(eachPet);
+    // console.log(eachPet);
 
     const getPets = document.getElementById("all-pets-div");
     const createDiv = document.createElement("div");
@@ -33,17 +33,17 @@ const allPetFunction = (data) => {
         <i class="fa-solid fa-dollar-sign"></i>
         <h1>Price : ${eachPet.price} $</h1>
       </div>
-
-      <div class="gap-4">
-        <button><i class="fa-regular fa-thumbs-up"></i></button>
-        <button>Adopt</button>
-        <button>Details</button>
+      <div class="divider"></div>
+      <div class="flex justify-between">
+        <button class=" border p-3 rounded-md font-semibold btn"><i class="fa-regular fa-thumbs-up"></i></button>
+        <button class=" border p-3 rounded-md font-semibold btn">Adopt</button>
+        <button class=" border p-3 rounded-md font-semibold btn">Details</button>
       </div>
      
      </div>
      </div>
    </div>
    `;
-      getPets.append(createDiv);
+    getPets.append(createDiv);
   });
 };
