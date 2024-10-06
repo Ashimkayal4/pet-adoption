@@ -13,23 +13,28 @@ const petBtn = (data) => {
   
 
     
-  /* cat clickFunction*/ 
+  /* cat clickFunction*/
     createBtn.querySelector("button").addEventListener("click", function () {
       const getPets = document.getElementById("all-pets-div");
       getPets.innerHTML = "";
+       const loader = document.createElement("div");
+       const loaderDiv = document.getElementById("loaderDiv");
+       loader.innerHTML = `<span class="loading loading-bars loading-lg"></span>`;
+       loaderDiv.append(loader);
 
-     if (pet.id === 1) {
-      fetch("https://openapi.programming-hero.com/api/peddy/category/cat")
-      .then((res) => res.json())
-     .then((data) => getDogs(data.data));
-     
-    
-     getPets.classList.add("grid");      
-     const getDogs = (dogs) => {
-     dogs.forEach((dog) => {
-     const getPets = document.getElementById("all-pets-div");
-     const createDiv = document.createElement("div");
-     createDiv.innerHTML = `
+      
+      setTimeout(function () {
+        if (pet.id === 1) {
+          fetch("https://openapi.programming-hero.com/api/peddy/category/cat")
+            .then((res) => res.json())
+            .then((data) => getDogs(data.data));
+
+          getPets.classList.add("grid");
+          const getDogs = (dogs) => {
+            dogs.forEach((dog) => {
+              const getPets = document.getElementById("all-pets-div");
+              const createDiv = document.createElement("div");
+              createDiv.innerHTML = `
     <div class="card card-compact bg-base-100 shadow-xl">
      <figure>
        <img src="${dog.image}" alt="pets" />
@@ -61,29 +66,36 @@ const petBtn = (data) => {
       </div>
       </div>
      </div>
-     `;         
-     getPets.append(createDiv);
-     });
-    };}
+     `;
+              getPets.append(createDiv);
+            });
+          };
+        }
+        loader.innerHTML=""
+      }, 2000);
     });
 
   /* Rabbit clickFunction*/ 
   createBtn.querySelector("button").addEventListener("click", function () {
-      const getPets = document.getElementById("all-pets-div");
-      getPets.innerHTML = "";
+    const getPets = document.getElementById("all-pets-div");
+    getPets.innerHTML = "";
+    const loader = document.createElement("div");
+    const loaderDiv = document.getElementById("loaderDiv");
+    loader.innerHTML = `<span class="loading loading-bars loading-lg"></span>`;
+    loaderDiv.append(loader);
 
-     if (pet.id === 3) {
-      fetch("https://openapi.programming-hero.com/api/peddy/category/rabbit")
-      .then((res) => res.json())
-     .then((data) => getRabbit(data.data));
-     
-       
-    getPets.classList.add("grid");      
-     const getRabbit = (rabbits) => {
-     rabbits.forEach((rabbit) => {
-     const getPets = document.getElementById("all-pets-div");
-     const createDiv = document.createElement("div");
-     createDiv.innerHTML = `
+    setTimeout(function () {
+      if (pet.id === 3) {
+        fetch("https://openapi.programming-hero.com/api/peddy/category/rabbit")
+          .then((res) => res.json())
+          .then((data) => getRabbit(data.data));
+
+        getPets.classList.add("grid");
+        const getRabbit = (rabbits) => {
+          rabbits.forEach((rabbit) => {
+            const getPets = document.getElementById("all-pets-div");
+            const createDiv = document.createElement("div");
+            createDiv.innerHTML = `
     <div class="card card-compact bg-base-100 shadow-xl">
      <figure>
        <img src="${rabbit.image}" alt="pets" />
@@ -115,28 +127,37 @@ const petBtn = (data) => {
       </div>
       </div>
      </div>
-     `;         
-     getPets.append(createDiv);
-     });
-    };}
-    });
+     `;
+            getPets.append(createDiv);
+          });
+        };
+      }
+      loader.innerHTML=""
+    }, 2000);
+  });
 
   /*dogs clickFunction*/ 
   createBtn.querySelector("button").addEventListener("click", function () {
       const getPets = document.getElementById("all-pets-div");
-      getPets.innerHTML = "";
+     getPets.innerHTML = "";
+     const loader = document.createElement("div");
+     const loaderDiv = document.getElementById("loaderDiv");
+     loader.innerHTML = `<span class="loading loading-bars loading-lg"></span>`;
+     loaderDiv.append(loader);
 
-     if (pet.id === 2) {
-      fetch("https://openapi.programming-hero.com/api/peddy/category/dog")
-      .then((res) => res.json())
-      .then((data) => getDogs(data.data));
-       
-    getPets.classList.add("grid");   
-     const getDogs = (dogs) => {
-     dogs.forEach((dog) => {
-     const getPets = document.getElementById("all-pets-div");
-     const createDiv = document.createElement("div");
-     createDiv.innerHTML = `
+    
+    setTimeout(function () {
+      if (pet.id === 2) {
+        fetch("https://openapi.programming-hero.com/api/peddy/category/dog")
+          .then((res) => res.json())
+          .then((data) => getDogs(data.data));
+
+        getPets.classList.add("grid");
+        const getDogs = (dogs) => {
+          dogs.forEach((dog) => {
+            const getPets = document.getElementById("all-pets-div");
+            const createDiv = document.createElement("div");
+            createDiv.innerHTML = `
     <div class="card card-compact bg-base-100 shadow-xl">
      <figure>
        <img src="${dog.image}" alt="pets" />
@@ -168,33 +189,43 @@ const petBtn = (data) => {
       </div>
       </div>
      </div>
-     `;         
-     getPets.append(createDiv);
-     });
-    };}
+     `;
+            getPets.append(createDiv);
+          });
+        };
+      }
+      loader.innerHTML=""
+    }, 2000);
   });
     
-  
+    
   /* Birds clickFunction*/ 
   createBtn.querySelector('button').addEventListener('click', function () {
-      const getPets = document.getElementById("all-pets-div");
-      const createDiv = document.createElement("div");
-      getPets.innerHTML = "";
-      if (pet.id === 4) {
-        getPets.classList.remove('grid');
-        createDiv.innerHTML = `
+    const getPets = document.getElementById("all-pets-div");
+    const createDiv = document.createElement("div");
+    getPets.innerHTML = "";
+    const loader = document.createElement('div');
+    const loaderDiv = document.getElementById("loaderDiv");
+    loader.innerHTML = `<span class="loading loading-bars loading-lg"></span>`;
+    loaderDiv.append(loader);
+     
+      setTimeout(function () {
+        if (pet.id === 4) {
+          getPets.classList.remove("grid");
+          createDiv.innerHTML = `
       <div class="flex flex-col justify-center items-center border h-80">
        <div><img src="./images/error.webp"/></div>
        <h1>No Information Available</h1>
        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at <br> <span class="ml-40">its layout. The point of using Lorem Ipsum is that it has a.</span> </p>
       </div>
-      
       `;
-        getPets.append(createDiv);
-      }
-    }); 
+          getPets.append(createDiv);
+        }
+        loader.innerHTML=""
+      }, 2000);
+  }); 
     
-    petBtn.append(createBtn);
+  petBtn.append(createBtn);
   });
 };
 
