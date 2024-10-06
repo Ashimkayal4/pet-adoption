@@ -3,9 +3,8 @@ fetch("https://openapi.programming-hero.com/api/peddy/pets")
 .then((data) => allPetFunction(data.pets));
 
 const allPetFunction = (data) => {
-  data.forEach((eachPet) => {
-    // console.log(eachPet);
 
+  data.forEach((eachPet) => {
     const getPets = document.getElementById("all-pets-div");
     const createDiv = document.createElement("div");
     createDiv.innerHTML = `
@@ -34,16 +33,19 @@ const allPetFunction = (data) => {
         <h1>Price : ${eachPet.price} $</h1>
       </div>
       <div class="divider"></div>
-      <div class="flex justify-between">
-        <button class=" border p-3 rounded-md font-semibold btn"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class=" border p-3 rounded-md font-semibold btn">Adopt</button>
-        <button class=" border p-3 rounded-md font-semibold btn">Details</button>
+      <div  class="flex justify-between">
+        <button onclick="myFunction('${eachPet.image}')" class=" border p-3 rounded-md font-semibold btn"><i class="fa-regular fa-thumbs-up"></i></button>
+        <button class="btn" onclick="my_modal_5.showModal()">Adopt</button>
+        <button onclick="petDetails()" class=" border p-3 rounded-md font-semibold btn">Details</button>
       </div>
      
      </div>
      </div>
    </div>
    `;
+   
     getPets.append(createDiv);
   });
+
 };
+
