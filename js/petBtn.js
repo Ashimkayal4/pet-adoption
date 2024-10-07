@@ -58,8 +58,8 @@ const petBtn = (data) => {
      <div class="divider"></div>
      <div class="flex justify-between">
       <button onclick="myFunction('${cat.image}')" class=" border p-3 rounded-md font-semibold btn"><i class="fa-regular fa-thumbs-up"></i></button>
-       <button class="btn" onclick="my_modal_5.showModal()">Adopt</button>
-      <button class=" border p-3 rounded-md font-semibold btn">Details</button>
+      <button class=" border p-3 rounded-md font-semibold btn"> Adopt</button>
+      <button class="btn" onclick="my_modal_5.showModal()">Details</button>
      </div>
       </div>
       </div>
@@ -117,8 +117,9 @@ const petBtn = (data) => {
      <div class="divider"></div>
      <div class="flex justify-between">
       <button onclick="myFunction('${rabbit.image}')" class=" border p-3 rounded-md font-semibold btn"><i class="fa-regular fa-thumbs-up"></i></button>
-       <button class="btn" onclick="my_modal_5.showModal()">Adopt</button>
-      <button class=" border p-3 rounded-md font-semibold btn">Details</button>
+       
+      <button class=" border p-3 rounded-md font-semibold btn"> Adopt</button>
+      <button class="btn" onclick="my_modal_5.showModal()">Details</button>
      </div>
       </div>
       </div>
@@ -174,8 +175,9 @@ const petBtn = (data) => {
      <div class="divider"></div>
      <div class="flex justify-between">
       <button onclick="myFunction('${dog.image}')" class=" border p-3 rounded-md font-semibold btn"><i class="fa-regular fa-thumbs-up"></i></button>
-       <button class="btn" onclick="my_modal_5.showModal()">Adopt</button>
-      <button class=" border p-3 rounded-md font-semibold btn">Details</button>
+      
+      <button class=" border p-3 rounded-md font-semibold btn"> Adopt</button>
+       <button class="btn" onclick="my_modal_5.showModal()">Details</button>
      </div>
       </div>
       </div>

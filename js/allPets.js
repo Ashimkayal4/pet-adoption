@@ -34,9 +34,9 @@ const allPetFunction = (data) => {
       </div>
       <div class="divider"></div>
       <div  class="flex justify-between">
-        <button onclick="myFunction('${eachPet.image}')" class=" border p-3 rounded-md font-semibold btn"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn" onclick="my_modal_5.showModal()">Adopt</button>
-        <button onclick="petDetails()" class=" border p-3 rounded-md font-semibold btn">Details</button>
+        <button onclick="myFunction('${eachPet.image}')" class=" border p-4 rounded-md font-semibold btn"><i class="fa-regular fa-thumbs-up"></i></button>
+        <button class="btn">Adopt</button>
+        <button onclick="getId('${eachPet.petId}')" class="btn" >Details</button>
       </div>
      
      </div>
