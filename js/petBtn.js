@@ -14,25 +14,26 @@ const petBtn = (data) => {
     /* Cat clickFunction */
 
     createBtn.querySelector("button").addEventListener("click", function () {
-      const getPets = document.getElementById("all-pets-div");
-      getPets.innerHTML = "";
-      const loader = document.createElement("div");
-      const loaderDiv = document.getElementById("loaderDiv");
-      loader.innerHTML = `<span class="loading loading-bars loading-lg"></span>`;
-      loaderDiv.append(loader);
+      
+    const getPets = document.getElementById("all-pets-div");
+    getPets.innerHTML = "";
+    const loader = document.createElement("div");
+    const loaderDiv = document.getElementById("loaderDiv");
+    loader.innerHTML = `<span class="loading loading-bars loading-lg"></span>`;
+    loaderDiv.append(loader) 
+    setTimeout(function () {
+    if (pet.id === 1) {
+    fetch("https://openapi.programming-hero.com/api/peddy/category/cat")
+    .then((res) => res.json())
+    .then((data) => getDogs(data.data));
+         
 
-      setTimeout(function () {
-        if (pet.id === 1) {
-          fetch("https://openapi.programming-hero.com/api/peddy/category/cat")
-            .then((res) => res.json())
-            .then((data) => getDogs(data.data));
-
-          getPets.classList.add("grid");
-          const getDogs = (cats) => {
-            cats.forEach((cat) => {
-              const getPets = document.getElementById("all-pets-div");
-              const createDiv = document.createElement("div");
-              createDiv.innerHTML = `
+    getPets.classList.add("grid");
+    const getDogs = (cats) => {
+    cats.forEach((cat) => {
+    const getPets = document.getElementById("all-pets-div");
+    const createDiv = document.createElement("div");
+    createDiv.innerHTML = `
     <div class="card card-compact bg-base-100 shadow-xl">
      <figure>
        <img src="${cat.image}" alt="pets" />
@@ -199,12 +200,13 @@ const petBtn = (data) => {
 
       setTimeout(function () {
         if (pet.id === 4) {
-          getPets.classList.remove("grid");
+          getPets.classList.remove("lg:grid-cols-3");
+          getPets.classList.remove("lg:grid");
           createDiv.innerHTML = `
-      <div class="flex flex-col justify-center items-center border h-80">
+      <div class="flex flex-col justify-center items-center border w-full h-96">
        <div><img src="./images/error.webp"/></div>
-       <h1>No Information Available</h1>
-       <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at <br> <span class="ml-40">its layout. The point of using Lorem Ipsum is that it has a.</span> </p>
+       <h1 class="text-2xl font-semibold">No Information Available</h1>
+       <p class="p-3">It is a long established fact that a reader will be distracted by the readable content of a page when looking at <span class="">its layout. The point of using Lorem Ipsum is that it has a.</span> </p>
       </div>
       `;
           getPets.append(createDiv);

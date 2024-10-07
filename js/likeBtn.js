@@ -3,6 +3,7 @@ function myFunction(data) {
   const value = data;
   const setPic = document.getElementById("set-picture");
   const createPic = document.createElement("div");
+  
   createPic.innerHTML = `
   <div class="card">
     <img src="${value}" class="rounded-xl w-30 h-20" />
@@ -32,7 +33,7 @@ function getPets(data) {
      <figure>
       <img
       src="${data.image}"
-      alt="pets" class="h-30 w-full" />
+      alt="pets" class="" />
      </figure> 
      <div class="card-body">
      <h2 class="card-title">${data.pet_name}</h2>

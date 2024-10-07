@@ -8,11 +8,11 @@ const allPetFunction = (data) => {
     const getPets = document.getElementById("all-pets-div");
     const createDiv = document.createElement("div");
     createDiv.innerHTML = `
-    <div class="card card-compact bg-base-100 shadow-xl">
+    <div class="card card-compact bg-base-100 shadow-xl border max-sm:mb-5">
      <figure>
       <img
       src="${eachPet.image}"
-      alt="pets" />
+      alt="pets" class=" rounded-lg" />
      </figure>
      <div class="card-body">
      <h2 class="card-title">${eachPet.pet_name}</h2>
