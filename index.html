@@ -27,13 +27,13 @@
       .fonts {
         font-family: "Lato", sans-serif;
       }
-      .color{
+      .color {
         color: rgb(160, 160, 160);
       }
-      .back{
+      .back {
         background-color: rgba(19, 19, 19, 1);
       }
-      .btn2{
+      .btn2 {
         background-color: rgba(14, 122, 129, 1);
       }
     </style>
@@ -54,15 +54,19 @@
           <i class="fa-regular fa-circle-user text-2xl"></i>
         </div>
 
-        <div class="lg:hidden max-sm:text-2xl"><i class="fa-solid fa-bars"></i></div>
+        <div class="lg:hidden max-sm:text-2xl">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </nav>
       <div class="flex items-center flex-col mt-5 gap-4">
-        <h1>Bringing  Families Together</h1>
-        <h1 class="lg:text-4xl max-sm:text-xl font-bold">Your Path to Adoption</h1>
+        <h1>Bringing Families Together</h1>
+        <h1 class="lg:text-4xl max-sm:text-xl font-bold">
+          Your Path to Adoption
+        </h1>
         <h1 class="lg:text-4xl max-sm:text-xl font-bold">Starts Here</h1>
         <p>
           It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking <br>
+          readable content of a page when looking <br />
           at its layout. The point of using Lorem Ipsum is that it has a
         </p>
         <a href="#main"><button class="btn">View More</button></a>
@@ -74,91 +78,127 @@
         <h1 class="text-2xl font-bold">Adopt Your Best Friend</h1>
         <p>
           It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking 
-          <br> at its layout. The point of using Lorem Ipsum is that it has
+          readable content of a page when looking
+          <br />
+          at its layout. The point of using Lorem Ipsum is that it has
         </p>
       </div>
       <!-- pet button start -->
-      <div id="pet-button" class="lg:flex lg:justify-between mt-4 max-sm:grid max-sm:grid-cols-2 max-sm:gap-4"></div>
+      <div
+        id="pet-button"
+        class="lg:flex lg:justify-between mt-4 max-sm:grid max-sm:grid-cols-2 max-sm:gap-4"
+      ></div>
       <!-- pet button end -->
       <div class="flex justify-between mt-5 max-sm:flex-col">
         <h1 class="text-xl font-semibold">Best Deals For You</h1>
-        <button id="sortButton" class="text-xs btn max-sm:w-1/3 max-sm:gap-2">Sort by Price</button>
+        <button id="sortByPriceBtn" class="text-xs btn max-sm:w-1/3 max-sm:gap-2">
+          Sort by Price
+        </button>
       </div>
       <!-- loader start -->
       <div id="loaderDiv" class="flex justify-center"></div>
+
       <!-- ALL pets div start-->
       <div class="flex mt-5 gap-3 max-sm:flex-col">
         <div
           id="all-pets-div"
-          class="lg:grid lg:grid-cols-3 gap-4 lg:w-2/3 max-sm:grid-cols-1 max-sm:w-full max-sm:gap-5  "
+          class="lg:grid lg:grid-cols-3 gap-4 lg:w-2/3 max-sm:grid-cols-1 max-sm:w-full max-sm:gap-5"
         ></div>
-        <div id="set-picture"
-          class="lg:w-1/3 grid grid-cols-3 h-full gap-2 rounded-md"
-        ></div>
+        <div id="set-picture" class="lg:w-1/3 grid grid-cols-2 border">
+          
+        </div>
       </div>
 
       <!-- ALL pets div end-->
 
       <!-- Open the modal using ID.showModal() method -->
 
-      <dialog id="my_modal_5" onclick="my_modal_1.showModal()" class="modal modal-bottom sm:modal-middle border">
+      <dialog
+        id="my_modal_5"
+        onclick="my_modal_1"
+        class="modal modal-bottom sm:modal-middle border"
+      >
         <div class="modal-box">
-          <div id="modal"></div>
+          <div id="modalId"></div>
           <div class="modal-action">
             <form method="dialog">
-              <button class="btn ">Cancel</button>
+              <button class="btn">Cancel</button>
             </form>
           </div>
         </div>
       </dialog>
-    </main>
-    
 
-   <footer class="footer bg-base-200 text-base-content mt-5 p-10 back">
-   <nav>
-      <div class="flex gap-3 items-center"> <img src="./images/logo.webp" class="h-4" alt="">
-       <h6 class=" text-xl text-white">Peddy</h6></div>
-      <a class="link link-hover color">Location : av. Washington 165, NY CA 54003</a>
-      <a class="link link-hover color">Phone: +31 85 964 47 25</a>
-      <a class="link link-hover color">Email: info@yourdomain.com</a>
-      <a class="link link-hover color">Openings hours: 9.00 AM - 5.00 PM</a>
-      <div class="flex">
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-      </div>
-   </nav>
+      <dialog
+        id="my_modal_5"
+        onclick="my_modal_1"
+        class="modal modal-bottom sm:modal-middle border"
+      >
+        <div class="modal-box">
+          <h1>Congrats</h1>
+          <div class="modal-action">
+            <form method="dialog">
+              <button class="btn">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- You can open the modal using ID.showModal() method -->
      
-    <nav>
-      <h6 class="text-xl text-white">Useful Links</h6>
-      <a class="link link-hover color">Home</a>
-      <a class="link link-hover color">About Us</a>
-      <a class="link link-hover color">Animals</a>
-      <a class="link link-hover color">Foundation</a>
-      <a class="link link-hover color">Contact</a>
-    </nav>
-    
-    <form>
-     <h6 class="text-xl text-white">Drop a Message</h6>
-     <fieldset class="form-control w-80">
-       <div class="join ">
-         <input
-           type="text"
-           placeholder="Enter Your email"
-           class="input input-bordered join-item w-80 color"
-         />
-       </div>
-        <button class="btn2 w-80 h-12 rounded-md text-xs font-bold text-white mt-4">Subscribe</button>
-     </fieldset>
-    </form>
-   </footer>
-   
+      
+
+    </main>
+
+    <footer class="footer bg-base-200 text-base-content mt-5 p-10 back">
+      <nav>
+        <div class="flex gap-3 items-center">
+          <img src="./images/logo.webp" class="h-4" alt="" />
+          <h6 class="text-xl text-white">Peddy</h6>
+        </div>
+        <a class="link link-hover color"
+          >Location : av. Washington 165, NY CA 54003</a
+        >
+        <a class="link link-hover color">Phone: +31 85 964 47 25</a>
+        <a class="link link-hover color">Email: info@yourdomain.com</a>
+        <a class="link link-hover color">Openings hours: 9.00 AM - 5.00 PM</a>
+        <div class="flex">
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+        </div>
+      </nav>
+
+      <nav>
+        <h6 class="text-xl text-white">Useful Links</h6>
+        <a class="link link-hover color">Home</a>
+        <a class="link link-hover color">About Us</a>
+        <a class="link link-hover color">Animals</a>
+        <a class="link link-hover color">Foundation</a>
+        <a class="link link-hover color">Contact</a>
+      </nav>
+
+      <form>
+        <h6 class="text-xl text-white">Drop a Message</h6>
+        <fieldset class="form-control w-80">
+          <div class="join">
+            <input
+              type="text"
+              placeholder="Enter Your email"
+              class="input input-bordered join-item w-80 color"
+            />
+          </div>
+          <button
+            class="btn2 w-80 h-12 rounded-md text-xs font-bold text-white mt-4"
+          >
+            Subscribe
+          </button>
+        </fieldset>
+      </form>
+    </footer>
 
     <script src="./js/petBtn.js"></script>
     <script src="./js/allPets.js"></script>
     <script src="./js/likeBtn.js"></script>
-    <script src="./js/sort.js"></script>
   </body>
 </html>
