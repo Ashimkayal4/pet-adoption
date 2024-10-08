@@ -54,12 +54,12 @@
           <i class="fa-regular fa-circle-user text-2xl"></i>
         </div>
 
-        <div class="lg:hidden max-sm:text-2xl">
+        <div class="lg:hidden md:hidden max-sm:text-2xl">
           <i class="fa-solid fa-bars"></i>
         </div>
       </nav>
       <div class="flex items-center flex-col mt-5 gap-4">
-        <h1>Bringing Families Together</h1>
+        <h1>Bringing Families Together ❤️‍</h1>
         <h1 class="lg:text-4xl max-sm:text-xl font-bold">
           Your Path to Adoption
         </h1>
@@ -86,7 +86,7 @@
       <!-- pet button start -->
       <div
         id="pet-button"
-        class="lg:flex lg:justify-between mt-4 max-sm:grid max-sm:grid-cols-2 max-sm:gap-4"
+        class="lg:flex lg:justify-between mt-4 max-sm:grid max-sm:grid-cols-2 md:grid md:grid-cols-2 md:gap-4 max-sm:gap-4"
       ></div>
       <!-- pet button end -->
       <div class="flex justify-between mt-5 max-sm:flex-col">
@@ -102,23 +102,21 @@
       <div id="loaderDiv" class="flex justify-center"></div>
 
       <!-- ALL pets div start-->
+
       <div class="flex mt-5 gap-3 max-sm:flex-col">
         <div
           id="all-pets-div"
-          class="lg:grid lg:grid-cols-3 gap-4 lg:w-2/3 max-sm:grid-cols-1 max-sm:w-full max-sm:gap-5"
+          class="grid gap-4 w-full md:grid-cols-2 lg:grid-cols-3 lg:w-2/3 max-sm:grid-cols-1 max-sm:w-full max-sm:gap-5"
         ></div>
-        <div id="" class="lg:w-1/3 border-2 rounded-md">
-          <div id="set-picture" class=" grid grid-cols-2 "></div>
+        <div class="lg:w-1/3 border-2 rounded-md">
+          <div id="set-picture" class="grid grid-cols-2"></div>
         </div>
       </div>
+
       <!-- ALL pets div end-->
 
       <!-- Details modal -->
-      <dialog
-        id="my_modal_5"
-        onclick="my_modal_1"
-        class="modal modal-bottom sm:modal-middle border"
-      >
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle border">
         <div class="modal-box">
           <div id="modalId"></div>
           <div class="modal-action">
@@ -130,19 +128,19 @@
       </dialog>
 
       <!-- adopt modal -->
-    <dialog id="my_modal" class="modal">
-      <div class="modal-box">
-        <h3 class="text-2xl font-bold flex justify-center mb-5">Congrats !</h3>
-        <span id="countdown" class="text-3xl flex justify-center">3</span>
-        <div class="modal-action">
-          <form method="dialog">
-           
-          </form>
+      <dialog id="my_modal" class="modal">
+        <div class="modal-box">
+          <h3 class="text-2xl font-bold flex justify-center mb-5">
+            Congrats !
+          </h3>
+          <span id="countdown" class="text-3xl flex justify-center">3</span>
+          <div class="modal-action">
+            <form method="dialog"></form>
+          </div>
         </div>
-      </div>
-    </dialog>
-   </main>
-  
+      </dialog>
+    </main>
+
     <footer class="footer bg-base-200 text-base-content mt-5 p-10 back">
       <nav>
         <div class="flex gap-3 items-center">

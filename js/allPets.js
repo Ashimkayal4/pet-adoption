@@ -58,7 +58,7 @@ const allPetFunction = (data) => {
 
 
 
-function adoptBtn() {
+const adoptBtn = () => {
 
  const modal = document.getElementById("my_modal");
     const countdownElement = document.getElementById('countdown');

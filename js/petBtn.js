@@ -3,26 +3,45 @@ fetch("https://openapi.programming-hero.com/api/peddy/categories")
 .then((data) => petBtn(data.categories));
 
 const petBtn = (data) => {
-  const petBtn = document.getElementById("pet-button");
+  const petBtnContainer = document.getElementById("pet-button");
+
   data.forEach((pet) => {
     const createBtn = document.createElement("div");
 
     createBtn.innerHTML = `
-   <button onclick="petFindByName('${pet.category}')" class="flex items-center btn"><img class="h-8" src="${pet.category_icon}"/><p>${pet.category}</p></button>
-   `;
-    petBtn.append(createBtn);
+      <button class="flex items-center btn bg-gray-200 hover:bg-gray-300 rounded-lg" onclick="petFindByName('${pet.category}', this)">
+        <img class="h-8" src="${pet.category_icon}" alt="${pet.category} icon"/>
+        <p>${pet.category}</p>
+      </button>
+    `;
+
+    petBtnContainer.append(createBtn);
+
+    const button = createBtn.querySelector("button");
+    button.addEventListener("click", function () {
+    
+      const allButtons = document.querySelectorAll("#pet-button .btn");
+      allButtons.forEach((focus) => {
+        focus.classList.remove("bg-teal-100"); 
+        focus.classList.add("bg-gray-200"); 
+      });
+
+      this.classList.remove("bg-gray-200");
+      this.classList.add("bg-teal-100"); 
+    });
   });
 };
 
-function petFindByName(name) {
+const petFindByName=(name) => {
   fetch(`https://openapi.programming-hero.com/api/peddy/category/${name}`)
     .then(res => res.json())
-  .then(data =>showPetName(data.data))
+  .then(data => showPetName(data.data))
 }
 
-function showPetName(data) {
+const showPetName = (data) => {
   const getPets = document.getElementById("all-pets-div");
   const loaderDiv = document.getElementById("loaderDiv");
+  
 
   getPets.innerHTML = ""; 
   loaderDiv.innerHTML = `<span class="loading loading-bars loading-lg"></span>`;
@@ -31,11 +50,13 @@ function showPetName(data) {
   
     if (data.length === 0) {
       getPets.classList.remove("lg:grid-cols-3");
-      getPets.classList.remove("lg:grid");
+      getPets.classList.remove("grid");
+      getPets.classList.remove("md:grid-cols-2");
 
+      
       const createDiv = document.createElement("div");
       createDiv.innerHTML = `
-        <div class="flex flex-col justify-center items-center border w-full h-96">
+        <div class="flex flex-col justify-center items-center border-2 rounded-md w-full h-96">
           <div>
             <img src="./images/error.webp" alt="Error"/>
           </div>
@@ -63,7 +84,7 @@ function showPetName(data) {
         const price = pet.price ? pet.price : "Not Available";
 
         createDiv.innerHTML = `
-          <div class="card card-compact bg-base-100 shadow-xl">
+          <div class="card card-compact bg-base-100 shadow-xl border-2 p-1">
            <figure>
              <img src="${pet.image}" alt="pets" />
            </figure>
@@ -90,7 +111,7 @@ function showPetName(data) {
               <button onclick="myFunction('${pet.image}')" class="border p-3 rounded-md font-semibold btn">
                 <i class="fa-regular fa-thumbs-up"></i>
               </button>
-              <button onclick="adoptBtn()"  class="border p-3 rounded-md font-semibold btn">Adopt</button>
+              <button onclick="adoptBtn()" class="border p-3 rounded-md font-semibold btn">Adopt</button>
               <button class="btn" onclick="getId('${pet.petId}')">Details</button>
             </div>
            </div>

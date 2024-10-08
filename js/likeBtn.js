@@ -1,5 +1,5 @@
 
-function myFunction(data) {
+const myFunction = (data) => {
   const value = data;
   const setPic = document.getElementById("set-picture");
   const createPic = document.createElement("div");
@@ -15,13 +15,13 @@ function myFunction(data) {
 
 /* Details function dynamically */
 
-function getId(id) {
+const getId = (id) => {
   fetch(`https://openapi.programming-hero.com/api/peddy/pet/${id}`)
     .then((res) => res.json())
    .then((data) => getPets(data.petData));
 }
 
-function getPets(data) {
+const getPets = (data) => {
   my_modal_5.showModal();
   
   const section = document.getElementById("modalId");
