@@ -91,7 +91,10 @@
       <!-- pet button end -->
       <div class="flex justify-between mt-5 max-sm:flex-col">
         <h1 class="text-xl font-semibold">Best Deals For You</h1>
-        <button id="sortByPriceBtn" class="text-xs btn max-sm:w-1/3 max-sm:gap-2">
+        <button
+          id="sortByPriceBtn"
+          class="text-xs btn max-sm:w-1/3 max-sm:gap-2"
+        >
           Sort by Price
         </button>
       </div>
@@ -104,15 +107,13 @@
           id="all-pets-div"
           class="lg:grid lg:grid-cols-3 gap-4 lg:w-2/3 max-sm:grid-cols-1 max-sm:w-full max-sm:gap-5"
         ></div>
-        <div id="set-picture" class="lg:w-1/3 grid grid-cols-2 border">
-          
+        <div id="" class="lg:w-1/3 border-2 rounded-md">
+          <div id="set-picture" class=" grid grid-cols-2 "></div>
         </div>
       </div>
-
       <!-- ALL pets div end-->
 
-      <!-- Open the modal using ID.showModal() method -->
-
+      <!-- Details modal -->
       <dialog
         id="my_modal_5"
         onclick="my_modal_1"
@@ -128,27 +129,20 @@
         </div>
       </dialog>
 
-      <dialog
-        id="my_modal_5"
-        onclick="my_modal_1"
-        class="modal modal-bottom sm:modal-middle border"
-      >
-        <div class="modal-box">
-          <h1>Congrats</h1>
-          <div class="modal-action">
-            <form method="dialog">
-              <button class="btn">Cancel</button>
-            </form>
-          </div>
+      <!-- adopt modal -->
+    <dialog id="my_modal" class="modal">
+      <div class="modal-box">
+        <h3 class="text-2xl font-bold flex justify-center mb-5">Congrats !</h3>
+        <span id="countdown" class="text-3xl flex justify-center">3</span>
+        <div class="modal-action">
+          <form method="dialog">
+           
+          </form>
         </div>
-      </dialog>
-
-      <!-- You can open the modal using ID.showModal() method -->
-     
-      
-
-    </main>
-
+      </div>
+    </dialog>
+   </main>
+  
     <footer class="footer bg-base-200 text-base-content mt-5 p-10 back">
       <nav>
         <div class="flex gap-3 items-center">

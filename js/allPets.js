@@ -7,7 +7,7 @@ const allPetFunction = (data) => {
   data.forEach((eachPet) => {
     const getPets = document.getElementById("all-pets-div");
     const createDiv = document.createElement("div");
-    createDiv.classList.add('p-1', 'border', 'rounded-md')
+    createDiv.classList.add('p-1', 'border-2', 'rounded-md')
     
     const breed = eachPet.breed ? eachPet.breed : "Not Available";
     const dateOfBirth = eachPet.date_of_birth ? eachPet.date_of_birth : "Not Available";
@@ -41,9 +41,9 @@ const allPetFunction = (data) => {
       </div>
       <div class="divider"></div>
       <div class="flex justify-between">
-        <button onclick="myFunction('${ eachPet.image}')" class=" border p-4 rounded-md font-semibold btn"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button onclick="sortFunction()" class="btn">Adopt</button>
-        <button onclick="getId('${ eachPet.petId}')" class="btn" >Details</button>
+        <button onclick="myFunction('${eachPet.image}')" class=" border p-4 rounded-md font-semibold btn"><i class="fa-regular fa-thumbs-up"></i></button>
+        <button onclick="adoptBtn()" class="btn">Adopt</button>
+        <button onclick="getId('${eachPet.petId}')" class="btn" >Details</button>
       </div>
      
      </div>
@@ -56,3 +56,26 @@ const allPetFunction = (data) => {
 
 };
 
+
+
+function adoptBtn() {
+
+ const modal = document.getElementById("my_modal");
+    const countdownElement = document.getElementById('countdown');
+    let countdown = 3;
+
+    modal.showModal()
+
+    // Start countdown
+    const interval = setInterval(() => {
+      countdownElement.textContent = countdown;
+      countdown--;
+
+      // Close the modal when countdown reaches 0
+      if (countdown < 0) {
+        clearInterval(interval);
+        modal.close()
+      }
+    }, 1000);
+  
+}

@@ -90,8 +90,8 @@ function showPetName(data) {
               <button onclick="myFunction('${pet.image}')" class="border p-3 rounded-md font-semibold btn">
                 <i class="fa-regular fa-thumbs-up"></i>
               </button>
-              <button class="border p-3 rounded-md font-semibold btn">Adopt</button>
-              <button class="btn" onclick="my_modal_5.showModal()">Details</button>
+              <button onclick="adoptBtn()"  class="border p-3 rounded-md font-semibold btn">Adopt</button>
+              <button class="btn" onclick="getId('${pet.petId}')">Details</button>
             </div>
            </div>
           </div>
